@@ -1,11 +1,17 @@
 package core.domain.fileUnpackagerComponent;
 
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class UnpackageFacade {
 
-    public void unpackageFile(String filePath) throws FileNotFoundException {
+    public void unpackageFile(String filePath) throws IOException {
 
         switch ((filePath.substring(filePath.lastIndexOf(".")+1)).toLowerCase()){
             case ("xlsx"):
@@ -17,7 +23,7 @@ public class UnpackageFacade {
 
     }
 
-    private void unpackageExcelFile(String filePath) throws FileNotFoundException {
+    private void unpackageExcelFile(String filePath) throws IOException {
         FileInputStream fileInputStream = new FileInputStream(filePath);
         Workbook workbook = WorkbookFactory.create(fileInputStream);
 

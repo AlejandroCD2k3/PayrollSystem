@@ -1,5 +1,8 @@
 package core.domain.fileUnpackagerComponent;
 
+import org.apache.poi.ss.usermodel.*;
+import java.util.Date;
+
 public class ExcelWorkAttendanceBuilder implements AttendanceBuilder{
 
     private WorkAttendance result = new WorkAttendance();
@@ -14,7 +17,7 @@ public class ExcelWorkAttendanceBuilder implements AttendanceBuilder{
         int rowIndexCounter = 2;
 
         while(row.getCell(rowIndexCounter).getLocalDateTimeCellValue() != null){
-            Record dailyRecord = new DailyRecord(row.getCell(rowIndexCounter).getLocalDateTimeCellValue().toLacalDate(), row.getCell(rowIndexCounter+1).getLocalDateTimeCellValue().toLocalTime(), row.getCell(rowIndexCounter+2).getLocalDateTimeCellValue().toLocalTime());
+            Record dailyRecord = new DailyRecord(row.getCell(rowIndexCounter).getDateCellValue(), row.getCell(rowIndexCounter+1).getLocalDateTimeCellValue().toLocalTime(), row.getCell(rowIndexCounter+2).getLocalDateTimeCellValue().toLocalTime());
             result.getAttendanceRecord().add(dailyRecord);
             rowIndexCounter += 3;
         }
