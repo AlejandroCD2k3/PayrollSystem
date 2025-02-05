@@ -29,4 +29,8 @@ public abstract class Employee {
     public String getEmail(){
         return this.email;
     }
+
+    public void setIdentityDocument(int identityDocument){
+        this.identityDocument = identityDocument;
+    }
 }
