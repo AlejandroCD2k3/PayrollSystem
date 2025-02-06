@@ -1,0 +1,111 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #e1ffcb, #f3ffea); /* Degradado suave */
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ENCABEZADO FIJO */
+header {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a); /* Colores más suaves */
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;
+    padding: 20px;
+}
+
+/* CAJA PRINCIPAL */
+.container {
+    padding: 40px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+}
+
+/* OPCIONES DEL MENÚ - BOTONES DISTRIBUIDOS HORIZONTALMENTE */
+.menu-options {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 20px; /* Espaciado entre botones */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Para que los botones bajen si la pantalla es pequeña */
+}
+
+/* ESTILO DE LOS BOTONES */
+.menu-options button,
+.menu-options .btn{
+    text-decoration: none;
+    padding: 15px 25px;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    min-width: 200px;
+}
+
+.menu-options button:hover {
+    background-color: #2e7d32;
+    transform: scale(1)
+    max-width;
+}
+
+/* CONTENIDO - SE MUESTRA CUANDO ESTÁ ACTIVO */
+.content {
+    display: none;
+    padding: 30px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.content {
+    display: none;
+    padding: 20px; /* Espaciado interno reducido */
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+    margin-top: 20px;
+    width: 95%; /* Antes estaba en 100%, ahora es más pequeño */
+    max-width: 1500x; /* Limita el tamaño máximo */
+}
+
+/* Cuando se muestra */
+.content.show {
+    display: block;
+    opacity: 1;
+}
+

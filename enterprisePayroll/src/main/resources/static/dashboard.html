@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <img src="LogoGiro.png" alt="Logo GIRO S.A.S" class="header-logo" width="60" height="60">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard_styles.css">
+</head>
+<body>
+    <header>
+        
+        <h1>Servicios del Usuario</h1>
+        
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Opciones</h2>
+            <p>Selecciona una opción para continuar:</p>
+
+            <div class="menu-options">
+                
+                <button onclick="showSection('upload')">Subir Archivos</button>
+                <button onclick="showSection('report')">Generar Informe</button>
+                <button onclick="showSection('employee')">Consultar Nómina</button>
+                <button onclick="showSection('contract')">Crear Contrato</button>
+                <a href="index.html" class="btn">Inicio</a>
+            
+            </div>
+
+            <section id="upload" class="content">
+                <h3>Subir Archivos</h3>
+                <input type="file" id="fileUpload" accept=".xlsx,.pdf,.docx">
+                <button>Subir</button>
+            </section>
+
+            <section id="report" class="content">
+                <h3>Generar Informe</h3>
+                <label for="fileName">Nombre del Archivo:</label>
+                <input type="text" id="fileName">
+                <label for="filePath">Ruta de Guardado:</label>
+                <input type="text" id="filePath">
+                <button>Generar Informe</button>
+            </section>
+
+            <section id="employee" class="content">
+                <h3>Consultar Nómina</h3>
+                <label for="employeeId">ID del Empleado:</label>
+                <input type="text" id="employeeId">
+                <button>Buscar</button>
+                <div id="employeeData"></div>
+            </section>
+
+            <section id="contract" class="content">
+                <h3>Crear Contrato</h3>
+                <form>
+                    <label for="request">Solicitud:</label>
+                    <input type="text" id="request">
+                    <label for="contractType">Tipo de Contrato:</label>
+                    <input type="text" id="contractType">
+                    <label for="jobTitleType">Puesto:</label>
+                    <input type="text" id="jobTitleType">
+                    <label for="jobTitleDepartment">Departamento:</label>
+                    <input type="text" id="jobTitleDepartment">
+                    <label for="employee">Empleado:</label>
+                    <input type="text" id="employee">
+                    <label for="startDate">Fecha de Inicio:</label>
+                    <input type="date" id="startDate">
+                    <label for="endDate">Fecha de Fin:</label>
+                    <input type="date" id="endDate">
+                    <label for="salary">Salario:</label>
+                    <input type="number" id="salary" step="0.01">
+                    <label for="checkInTime">Hora de Entrada:</label>
+                    <input type="time" id="checkInTime">
+                    <label for="checkOutTime">Hora de Salida:</label>
+                    <input type="time" id="checkOutTime">
+                    <label for="identityDocument">Documento de Identidad:</label>
+                    <input type="number" id="identityDocument">
+                    <label for="fullName">Nombre Completo:</label>
+                    <input type="text" id="fullName">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email">
+                    <label for="type">Tipo:</label>
+                    <input type="text" id="type">
+                    <button type="submit">Crear Contrato</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(sec => sec.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+    
+</body>
+</html>

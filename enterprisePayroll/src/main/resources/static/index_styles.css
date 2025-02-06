@@ -1,0 +1,114 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #e1ffcb, #f3ffea); /* Degradado suave */
+    background-color: #f1f8e9;
+    text-align: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ENCABEZADO FIJO */
+header {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+main {
+    flex-grow: 1; /* Para ocupar el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center;
+    padding: 20px;
+}
+
+/* SECCIÓN PRINCIPAL - AJUSTADA PARA OCUPAR MÁS ESPACIO */
+section {
+    padding: 40px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+/* TEXTO CENTRAL MÁS GRANDE */
+section h2 {
+    font-size: 28px;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* NAV - SE MANTIENE ABAJO DEL MENSAJE */
+nav {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* BOTONES DEL MENÚ MÁS GRANDES */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: block;
+}
+
+/* BOTONES DEL MENÚ MÁS GRANDES Y VISIBLES */
+nav ul li a {
+    text-decoration: none;
+    padding: 15px 25px;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    min-width: 200px;
+}
+
+nav ul li a:hover {
+    background: #2e7d32;
+    color: #c8e6c9;
+    transform: scale(1.05);
+}
+
+header {
+    background: linear-gradient(135deg, #2e7d32, #7ee683);
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* Alinea la imagen y el título */
+    align-items: center; /* Centra verticalmente */
+}
